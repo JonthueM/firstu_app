@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import './top_widget_bar_account.dart';
+import './top_widget_bar_datetime.dart';
 
 class TopWidgetBar extends StatelessWidget {
   const TopWidgetBar({super.key});
@@ -8,6 +10,7 @@ class TopWidgetBar extends StatelessWidget {
     return const Stack(
       children: [
         Bar(),
+        AccountWithTime()
       ],
     );
   }
@@ -45,3 +48,18 @@ class Bar extends StatelessWidget {
   }
 }
 
+
+class AccountWithTime extends StatelessWidget {
+  const AccountWithTime({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Wrap(
+      alignment: WrapAlignment.spaceEvenly,
+      children: [
+        Account(),
+        DateTimePart()
+      ],
+    );
+  }
+}
