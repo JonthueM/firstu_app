@@ -54,12 +54,14 @@ class AccountWithTime extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Wrap(
-      alignment: WrapAlignment.spaceEvenly,
-      children: [
-        Account(),
-        DateTimePart()
-      ],
+    return Expanded(
+      child: Wrap(
+        alignment: WrapAlignment.spaceEvenly,
+        children: [
+          Account(),
+          DateTimePart()
+        ],
+      ),
     );
   }
 }
